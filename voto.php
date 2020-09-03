@@ -1,5 +1,7 @@
 <?php
 
+$votos = json_decode(file_get_contents("votos.json"), true);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['reset']) && !empty($_POST['reset'])) {
         $reset = [
@@ -13,13 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         file_put_contents('votos.json', json_encode($reset));
     } else {
         extract($_POST);
-        $novo = ++$votos[$voto];
-        $votos[$voto] = $novo;
+        $votos["$voto"] = $votos["$voto"]+1;
         file_put_contents('votos.json', json_encode($votos));
     }
 }
 
-$votos = json_decode(file_get_contents("votos.json"), true);
 $totalStars = 0;
 $voters = array_sum($votos);
 
