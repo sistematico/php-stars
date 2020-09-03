@@ -74,25 +74,12 @@ span.stars>*{
                 let voto = cinco.toFixed(1);
             });
 
-            // $.ajax({
-            //     url: "test.html",
-            //     context: document.body
-            // }).done(function() {
-            //     $( this ).addClass( "done" );
-            // });
-
             $.ajax({
-                url: "page.php",
+                url: "voto.php",
                 method: "POST",
-                context: document.body,
-                data: { id : menuId },
-                dataType: "json"
-            }).done(function() {
-                $( this ).addClass( "done" );
-            }).fail(function() {
-                alert( "error" );
-            }).always(function() {
-                alert( "complete" );
+                data: { voto : voto }
+            }).done(function(data) {
+                $('.stars').html(data);
             });
 
         });
