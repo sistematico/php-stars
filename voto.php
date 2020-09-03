@@ -11,12 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ];
 
         file_put_contents('votos.json', json_encode($reset));
+    } else {
+        extract($_POST);
+        $novo = ++$votos[$voto];
+        $votos[$voto] = $novo;
+        file_put_contents('votos.json', json_encode($votos));
     }
-    extract($_POST);
-    $novo = ++$votos[$voto];
-    $votos[$voto] = $novo;
-    file_put_contents('votos.json', json_encode($votos));
-    var_dump($votos);
 }
 
 $votos = json_decode(file_get_contents("votos.json"), true);
@@ -24,7 +24,7 @@ $totalStars = 0;
 $voters = array_sum($votos);
 
 foreach ($votos as $stars => $votes) {
-    $totalStars += (int) $stars * $votes;
+    $totalStars += $stars * $votes;
 }
 
 echo ($totalStars/$voters);
