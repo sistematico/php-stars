@@ -71,7 +71,7 @@ span.stars>*{
                 var nivel = e.pageX - posicao;
                 let porcentagem =  (100 * nivel) / $(this).width();
                 let cinco = porcentagem / 20;
-                let voto = cinco.toFixed(1);
+                let voto = cinco.toFixed(0);
             });
 
             $.ajax({
