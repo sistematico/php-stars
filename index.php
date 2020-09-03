@@ -12,8 +12,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://site.com" />
     <meta property="og:image" content="https://site.com/img/logo.png" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
     <style>
         span.stars, span.stars>* {
             display: inline-block;
