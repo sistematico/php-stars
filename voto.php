@@ -10,7 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 } //else 
 //if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['voto']) && !empty($_POST['voto'])) {
     $votos = json_decode(file_get_contents("votos.json"), true);
-    var_dump($votos);
+    
+    $key = 1;
+
+    $atual = $votos[$key];
+
+    echo ++$atual;
 
     //file_put_contents('votos.json', json_encode($ratings));
 
