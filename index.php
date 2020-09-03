@@ -90,8 +90,18 @@ span.stars>*{
                 //var multiplier = Math.pow(10, 1 || 0);
                 //var rounded = Math.round(range * multiplier) / multiplier;
 
+                // divisão por 20
 
-                alert(range.toFixed(1));
+                //function percentage(partialValue, totalValue) {
+                //    return (100 * partialValue) / totalValue;
+                //} 
+
+                //function percentage(partialValue, totalValue) {
+                    let porc =  (100 * range) / $(this).width();
+                //} 
+
+
+                alert(porc.toFixed(1));
             });
         });
     </script>
