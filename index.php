@@ -87,11 +87,11 @@ span.stars>*{
                 //alert($(this).offset().left);
 
 
-                var multiplier = Math.pow(10, 1 || 0);
-                var rounded = Math.round(range * multiplier) / multiplier;
+                //var multiplier = Math.pow(10, 1 || 0);
+                //var rounded = Math.round(range * multiplier) / multiplier;
 
 
-                alert(rounded);
+                alert(range.toFixed(1));
             });
         });
     </script>
