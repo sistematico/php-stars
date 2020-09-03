@@ -28,7 +28,10 @@
     </style>
 </head>
 <body>
-    Rating: <span class="stars">0.6</span><br />
+    Classificação: <span class="stars">0.6</span>
+    <br />
+    <br />
+    Média: <span class="media">0</span> Total de votos: <span class="total">0</span>
     <button>RESET</button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
@@ -45,7 +48,9 @@
                     context: document.body,
                     dataType: "json"
                 }).done(function(data) {
-                    $('.stars').html(data.votos);
+                    $('.stars').html(data.media);
+                    $('.media').html(data.media);
+                    $('.total').html(data.total);
                     $('.stars').stars();
                 });
             });
@@ -56,7 +61,9 @@
                     context: document.body,
                     dataType: "json"
             }).done(function(data) {
-                $('.stars').html(data.votos);
+                $('.stars').html(data.media);
+                $('.media').html(data.media);
+                $('.total').html(data.total);
                 $('.stars').stars();
             });
 
@@ -73,7 +80,9 @@
                     context: document.body,
                     dataType: "json"
                 }).done(function(data) {
-                    $('.stars').html(data.votos);
+                    $('.stars').html(data.media);
+                    $('.media').html(data.media);
+                    $('.total').html(data.total);
                     $('.stars').stars();
                 });
             });
