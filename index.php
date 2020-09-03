@@ -12,7 +12,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://site.com" />
     <meta property="og:image" content="https://site.com/img/logo.png" />
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
     <style>
         span.stars, span.stars>* {
@@ -28,18 +28,25 @@
     </style>
 </head>
 <body>
-    Classificação: <span class="stars">0.6</span>
-    <br />
-    <br />
-    Média: <span class="media">0</span>
-    <br />
-    Total de votos: <span class="total">0</span>
-    <br /><br />
-    <button>RESET</button>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Sistema de Classificação</h1>
+            <p class="subtitle">Clique em uma estrela e avalie.</p>
 
-    <br /><br />
-    JSON:<br />
-    <pre class="json"></pre>
+            <h2>Classificação</h2>
+            <p class="stars">0.6</p>
+
+            <h2>Média</h2>
+            <p class="media">0</p>
+
+            <h2>Total</h2>
+            <p class="total">0</p>
+
+            <button>RESET</button>
+
+            <h2>JSON</h2>
+            <pre class="json"></pre>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
@@ -108,5 +115,6 @@
 
         });
     </script>
-</body>
+  </section>
+  </body>
 </html>
