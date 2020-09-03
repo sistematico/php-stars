@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     //extract($_POST);
     $voto = 1;
     ++$votos[$voto];
-
-    echo ++$atual;
-
     file_put_contents('votos.json', json_encode($ratings));
+
+    var_dump($votos);
+
 
 ?>
