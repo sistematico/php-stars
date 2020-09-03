@@ -61,10 +61,14 @@ span.stars>*{
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $.fn.stars = function() {
-    return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
-};
+            return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
+        };
 
-$('.stars').stars();
+        $('.stars').stars();
+
+        $('.stars').click(function(){
+            alert($(this).offset().left)
+        });
     </script>
 </body>
 </html>
