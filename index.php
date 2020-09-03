@@ -97,11 +97,12 @@ span.stars>*{
                 //} 
 
                 //function percentage(partialValue, totalValue) {
-                    let porc =  (100 * range) / $(this).width();
+                let porcentagem =  (100 * range) / $(this).width();
+                let estrela = porcentagem / 20;
                 //} 
 
 
-                alert(porc.toFixed(1));
+                alert(estrela.toFixed(1));
             });
         });
     </script>
