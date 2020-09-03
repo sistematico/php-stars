@@ -34,7 +34,7 @@
             <p class="subtitle">Clique em uma estrela e avalie.</p>
 
             <h2>Classificação</h2>
-            <p class="stars">0.6</p>
+            <span class="stars">0.6</span>
 
             <h2>Média</h2>
             <p class="media">0</p>
