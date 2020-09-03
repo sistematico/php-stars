@@ -44,7 +44,6 @@
                 });
             });
 
-
             $.ajax({
                     url: "voto.php",
                     method: "GET",
@@ -72,6 +71,7 @@
                     context: document.body
                 }).done(function(data) {
                     $('.stars').html(data);
+                    $('.stars').stars();
                 });
             });
 
