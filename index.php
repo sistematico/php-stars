@@ -73,6 +73,28 @@ span.stars>*{
                 let cinco = porcentagem / 20;
                 let voto = cinco.toFixed(1);
             });
+
+            // $.ajax({
+            //     url: "test.html",
+            //     context: document.body
+            // }).done(function() {
+            //     $( this ).addClass( "done" );
+            // });
+
+            $.ajax({
+                url: "page.php",
+                method: "POST",
+                context: document.body,
+                data: { id : menuId },
+                dataType: "json"
+            }).done(function() {
+                $( this ).addClass( "done" );
+            }).fail(function() {
+                alert( "error" );
+            }).always(function() {
+                alert( "complete" );
+            });
+
         });
     </script>
 </body>
