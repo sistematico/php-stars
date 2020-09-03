@@ -31,7 +31,10 @@
     Classificação: <span class="stars">0.6</span>
     <br />
     <br />
-    Média: <span class="media">0</span> Total de votos: <span class="total">0</span>
+    Média: <span class="media">0</span>
+    <br />
+    Total de votos: <span class="total">0</span>
+    <br /><br />
     <button>RESET</button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
