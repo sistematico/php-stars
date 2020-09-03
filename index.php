@@ -47,7 +47,7 @@
             <h2>JSON</h2>
             <pre class="json"></pre>
         </div>
-
+    </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
@@ -115,6 +115,5 @@
 
         });
     </script>
-  </section>
-  </body>
+</body>
 </html>
