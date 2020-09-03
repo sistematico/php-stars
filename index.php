@@ -66,9 +66,26 @@ span.stars>*{
 
         $('.stars').stars();
 
-        $('.stars').click(function(){
-            //alert($(this).offset().left);
-            alert($(this).position().left);
+        $(document).ready(function(e) {
+            $('#A').click(function(e) {
+                alert(e.pageX+ ' , ' + e.pageY);
+            });    
+            $('#B').click(function(e) {
+                var posX = $(this).offset().left, posY = $(this).offset().top;
+                alert((e.pageX - posX)+ ' , ' + (e.pageY - posY));
+            });
+            $('#C').click(function(e) {
+                var posX = $(this).position().left,posY = $(this).position().top;
+                alert( (e.pageX - posX) + ' , ' + (e.pageY - posY));
+            });
+
+
+            $('.stars').click(function(e){
+                var posX = $(this).position().left;
+                var range = e.pageX - posX;
+                //alert($(this).offset().left);
+                alert(range);
+            });
         });
     </script>
 </body>
