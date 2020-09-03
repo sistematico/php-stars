@@ -32,6 +32,15 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
+            $.ajax({
+                    url: "voto.php",
+                    method: "GET",
+                    context: document.body
+            }).done(function(data) {
+                $('.stars').html(data);
+            });
+
+
             $.fn.stars = function() {
                 return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
             };
@@ -43,15 +52,14 @@
                 let porcentagem =  (100 * nivel) / $(this).width();
                 let cinco = porcentagem / 20;
                 let voto = cinco.toFixed(0);
-            });
-
-            $.ajax({
-                url: "voto.php",
-                method: "POST",
-                data: { voto : voto },
-                context: document.body
-            }).done(function(data) {
-                $('.stars').html(data);
+                $.ajax({
+                    url: "voto.php",
+                    method: "POST",
+                    data: { voto : voto },
+                    context: document.body
+                }).done(function(data) {
+                    $('.stars').html(data);
+                });
             });
 
         });
