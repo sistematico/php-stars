@@ -60,49 +60,18 @@ span.stars>*{
     Rating: <span class="stars">0.6</span>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-        $.fn.stars = function() {
-            return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
-        };
-
-        $('.stars').stars();
-
         $(document).ready(function(e) {
-            $('#A').click(function(e) {
-                alert(e.pageX+ ' , ' + e.pageY);
-            });    
-            $('#B').click(function(e) {
-                var posX = $(this).offset().left, posY = $(this).offset().top;
-                alert((e.pageX - posX)+ ' , ' + (e.pageY - posY));
-            });
-            $('#C').click(function(e) {
-                var posX = $(this).position().left,posY = $(this).position().top;
-                alert( (e.pageX - posX) + ' , ' + (e.pageY - posY));
-            });
-
+            $.fn.stars = function() {
+                return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
+            };
+            $('.stars').stars();
 
             $('.stars').click(function(e){
-                var posX = $(this).position().left;
-                var range = e.pageX - posX;
-                //var rounded = Math.round(range * 10) / 10;
-                //alert($(this).offset().left);
-
-
-                //var multiplier = Math.pow(10, 1 || 0);
-                //var rounded = Math.round(range * multiplier) / multiplier;
-
-                // divisão por 20
-
-                //function percentage(partialValue, totalValue) {
-                //    return (100 * partialValue) / totalValue;
-                //} 
-
-                //function percentage(partialValue, totalValue) {
-                let porcentagem =  (100 * range) / $(this).width();
-                let estrela = porcentagem / 20;
-                //} 
-
-
-                alert(estrela.toFixed(1));
+                var posicao = $(this).position().left;
+                var nivel = e.pageX - posicao;
+                let porcentagem =  (100 * nivel) / $(this).width();
+                let cinco = porcentagem / 20;
+                let voto = cinco.toFixed(1);
             });
         });
     </script>
