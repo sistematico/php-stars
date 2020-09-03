@@ -48,7 +48,8 @@
             $.ajax({
                 url: "voto.php",
                 method: "POST",
-                data: { voto : voto }
+                data: { voto : voto },
+                context: document.body
             }).done(function(data) {
                 $('.stars').html(data);
             });
