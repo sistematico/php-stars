@@ -10,6 +10,30 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> -->
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
     <style>
+
+  <div class="Aligner-item Aligner-item--top">…</div>
+  <div class="Aligner-item">…</div>
+  <div class="Aligner-item Aligner-item--bottom">…</div>
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 50%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+
         span.stars, span.stars>* {
             display: inline-block;
             background: url(estrela.png) 0 -16px repeat-x;
@@ -23,26 +47,22 @@
     </style>
 </head>
 <body>
-    <section class="section">
+    <main>
         <div class="container">
             <h1 class="title">Sistema de Classificação</h1>
             <p class="subtitle">Clique em uma estrela e avalie.</p>
 
             <span class="stars">0.6</span>
 
-            <h4>Média: <span class="media">0</span></h4>
-            
+            <h4>Média: <span class="media">0</span></h4>            
             <h4>Total: <span class="total">0</span></h4>
-
             <button>RESET</button>
-
             <h4>JSON</h4>
             <pre class="json"></pre>
-
             <br />
             Fontes no <a href="https://github.com/sistematico/php-stars">Github</a>.
         </div>
-    </section>
+    </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
