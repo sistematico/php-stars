@@ -49,7 +49,7 @@
                     dataType: "json"
                 }).done(function(data) {
                     $('.stars').html(data.media);
-                    $('.media').html(data.media);
+                    $('.media').html(data.media.toFixed(1));
                     $('.total').html(data.total);
                     $('.stars').stars();
                 });
@@ -62,7 +62,7 @@
                     dataType: "json"
             }).done(function(data) {
                 $('.stars').html(data.media);
-                $('.media').html(data.media);
+                $('.media').html(data.media.toFixed(1));
                 $('.total').html(data.total);
                 $('.stars').stars();
             });
@@ -81,7 +81,7 @@
                     dataType: "json"
                 }).done(function(data) {
                     $('.stars').html(data.media);
-                    $('.media').html(data.media);
+                    $('.media').html(data.media.toFixed(1));
                     $('.total').html(data.total);
                     $('.stars').stars();
                 });
