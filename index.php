@@ -30,13 +30,13 @@
 
             <span class="stars">0.6</span>
 
-            <h2>Média: <span class="media">0</span></h2>
+            <h4>Média: <span class="media">0</span></h4>
             
-            <h2>Total: <span class="total">0</span></h2>
+            <h4>Total: <span class="total">0</span></h4>
 
             <button>RESET</button>
 
-            <h2>JSON</h2>
+            <h4>JSON</h4>
             <pre class="json"></pre>
         </div>
     </section>
