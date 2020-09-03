@@ -11,14 +11,14 @@
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
     <style>
         span.stars, span.stars>* {
-            display: inline-block !important;
-            background: url(http://i.imgur.com/YsyS5y8.png) 0 -16px repeat-x;
-            width: 80px !important;
-            height: 16px !important;
+            display: inline-block;
+            background: url(estrela.png) 0 -16px repeat-x;
+            width: 80px;
+            height: 16px;
         }
         span.stars>*{
-            max-width:80px !important;
-            background-position: 0 0 !important;
+            max-width:80px;
+            background-position: 0 0;
         }
     </style>
 </head>
