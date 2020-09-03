@@ -11,10 +11,6 @@
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
     <style>
 
-  <div class="Aligner-item Aligner-item--top">…</div>
-  <div class="Aligner-item">…</div>
-  <div class="Aligner-item Aligner-item--bottom">…</div>
-
 main {
   display: flex;
   align-items: center;
