@@ -27,6 +27,6 @@ foreach ($votos as $stars => $votes) {
     $totalStars += $stars * $votes;
 }
 
-echo ($totalStars/$voters);
+echo ($totalStars > 0 ? $totalStars/$voters : 0);
 
 ?>
