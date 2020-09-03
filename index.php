@@ -38,6 +38,9 @@
 
             <h4>JSON</h4>
             <pre class="json"></pre>
+
+            <br />
+            Fontes no <a href="https://github.com/sistematico/php-stars">Github</a>.
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
