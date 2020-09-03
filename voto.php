@@ -22,8 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $votos = json_decode(file_get_contents("votos.json"), true);
 $totalStars = 0;
 $voters = array_sum($votos);
+
 foreach ($votos as $stars => $votes) {
-    $totalStars += $stars * $votes;
+    $totalStars += (int) $stars * $votes;
 }
 
 echo ($totalStars/$voters);
