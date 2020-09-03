@@ -1,7 +1,7 @@
 <?php
 
 // Read
-$shipments = json_decode(file_get_contents("votos.json"), true);
+//$shipments = json_decode(file_get_contents("votos.json"), true);
 
 // Write
 $ratings = [
@@ -12,7 +12,7 @@ $ratings = [
     5 => 3188
 ];
 
-file_put_contents('votos.json', json_encode($json_data));
+file_put_contents('votos.json', json_encode($ratings));
 
 $totalStars = 0;
 $voters = array_sum($ratings);
