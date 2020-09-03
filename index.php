@@ -28,11 +28,11 @@
     </style>
 </head>
 <body>
-    Rating: <span class="stars">0.6</span> <button onclick="reset()">RESET</button>
+    Rating: <span class="stars">0.6</span> <button>RESET</button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
-            function reset() {
+            $('button').click(function(){
                 $.ajax({
                     url: "voto.php",
                     method: "POST",
@@ -41,7 +41,8 @@
                 }).done(function(data) {
                     $('.stars').html(data);
                 });
-            }
+            });
+
 
             $.ajax({
                     url: "voto.php",
