@@ -83,8 +83,9 @@ span.stars>*{
             $('.stars').click(function(e){
                 var posX = $(this).position().left;
                 var range = e.pageX - posX;
+                var rounded = Math.round(range * 10) / 10;
                 //alert($(this).offset().left);
-                alert(range);
+                alert(rounded);
             });
         });
     </script>
