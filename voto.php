@@ -15,8 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         file_put_contents('votos.json', json_encode($reset));
     } else {
         extract($_POST);
-        $votos["$voto"] = $votos["$voto"]+1;
-        file_put_contents('votos.json', json_encode($votos));
+        if ($voto < 6) {
+            $votos["$voto"] = $votos["$voto"]+1;
+            file_put_contents('votos.json', json_encode($votos));
+        }
     }
 }
 
