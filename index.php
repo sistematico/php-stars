@@ -36,6 +36,11 @@
     Total de votos: <span class="total">0</span>
     <br /><br />
     <button>RESET</button>
+
+    <br /><br />
+    JSON:<br />
+    <pre class="json"></pre>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
@@ -54,6 +59,7 @@
                     $('.stars').html(data.media);
                     $('.media').html(data.media.toFixed(1));
                     $('.total').html(data.total);
+                    $('.json').html(JSON.stringify(data, undefined, 2));
                     $('.stars').stars();
                 });
             });
