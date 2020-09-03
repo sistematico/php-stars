@@ -21,7 +21,7 @@
             width: 80px;
             height: 16px;
         }
-        div.stars>*{
+        span.stars>*{
             max-width:80px;
             background-position: 0 0;
         }
@@ -35,7 +35,7 @@
 
             <h2>Classificação</h2>
             <br />
-            <div class="stars">0.6</div>
+            <span class="stars" style="margin:0; padding: 0;">0.6</span>
 
             <h2>Média</h2>
             <p class="media">0</p>
