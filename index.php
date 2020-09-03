@@ -35,7 +35,7 @@
 
             <h2>Classificação</h2>
             <br />
-            <span class="stars">0.6</span>
+            <div class="stars">0.6</div>
 
             <h2>Média</h2>
             <p class="media">0</p>
