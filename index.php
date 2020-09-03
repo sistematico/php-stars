@@ -59,7 +59,6 @@
                     $('.stars').html(data.media);
                     $('.media').html(data.media.toFixed(1));
                     $('.total').html(data.total);
-                    $('.json').html(JSON.stringify(data, undefined, 2));
                     $('.stars').stars();
                 });
             });
@@ -97,6 +96,14 @@
             });
 
             $('.stars').stars();
+
+            $.ajax({
+                url: 'votos.json',
+                dataType: 'json'
+            }).done(function(data) {
+                $('.json').html(JSON.stringify(data, undefined, 2));
+            });
+            
 
         });
     </script>
