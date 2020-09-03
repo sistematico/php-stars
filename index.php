@@ -67,7 +67,8 @@ span.stars>*{
         $('.stars').stars();
 
         $('.stars').click(function(){
-            alert($(this).offset().left)
+            //alert($(this).offset().left);
+            alert($(this).position().left);
         });
     </script>
 </body>
