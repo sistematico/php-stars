@@ -17,7 +17,7 @@
             height: 16px;
         }
         span.stars>*{
-            max-width:80px;
+            max-width: 80px;
             background-position: 0 0;
         }
     </style>
@@ -28,7 +28,6 @@
             <h1 class="title">Sistema de Classificação</h1>
             <p class="subtitle">Clique em uma estrela e avalie.</p>
 
-            <h2>Classificação<h2>
             <span class="stars">0.6</span>
 
             <h2>Média: <span class="media">0</span></h2>
