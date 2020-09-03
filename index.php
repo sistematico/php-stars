@@ -42,9 +42,10 @@
                     url: "voto.php",
                     method: "POST",
                     data: { reset: 'true' },
-                    context: document.body
+                    context: document.body,
+                    dataType: "json"
                 }).done(function(data) {
-                    $('.stars').html(data);
+                    $('.stars').html(data.votos);
                     $('.stars').stars();
                 });
             });
@@ -52,9 +53,10 @@
             $.ajax({
                     url: "voto.php",
                     method: "GET",
-                    context: document.body
+                    context: document.body,
+                    dataType: "json"
             }).done(function(data) {
-                $('.stars').html(data);
+                $('.stars').html(data.votos);
                 $('.stars').stars();
             });
 
@@ -68,9 +70,10 @@
                     url: "voto.php",
                     method: "POST",
                     data: { voto : voto },
-                    context: document.body
+                    context: document.body,
+                    dataType: "json"
                 }).done(function(data) {
-                    $('.stars').html(data);
+                    $('.stars').html(data.votos);
                     $('.stars').stars();
                 });
             });
