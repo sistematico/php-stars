@@ -29,7 +29,7 @@
             <p class="subtitle">Clique em uma estrela e avalie.</p>
 
             <h2>Classificação<h2>
-            <span class="stars" style="margin:0; padding: 0;">0.6</span>
+            <span class="stars">0.6</span>
 
             <h2>Média: <span class="media">0</span></h2>
             
