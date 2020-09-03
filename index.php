@@ -1,32 +1,3 @@
-<?php
-// https://stackoverflow.com/questions/28028242/calculate-average-rating-of-5-ratings
-// http://jsbin.com/IBIDalEn/2/edit?html,css,js,output
-// https://jsfiddle.net/sistematico/1dnygksw/
-
-$ratings = [
-    1 => 220,
-    2 => 31,
-    3 => 44,
-    4 => 175,
-    5 => 3188
-];
-
-$totalStars = 0;
-$voters = array_sum($ratings);
-foreach ($ratings as $stars => $votes) {
-    $totalStars += $stars * $votes;
-}
-
-//printf(
-//    '%d voters awarded a total of %d stars to X, giving an average rating of %.1f',
-//    $voters,
-//    $totalStars,
-//    $totalStars/$voters
-//);
-
-$media = $totalStars/$voters;
-
-?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -45,15 +16,15 @@ $media = $totalStars/$voters;
     <link rel="shortcut icon" href="img/favicon.ico">
     <style>
         span.stars, span.stars>* {
-    display: inline-block;
-    background: url(http://i.imgur.com/YsyS5y8.png) 0 -16px repeat-x;
-    width: 80px;
-    height: 16px;
-}
-span.stars>*{
-    max-width:80px;
-    background-position: 0 0;
-}
+            display: inline-block;
+            background: url(http://i.imgur.com/YsyS5y8.png) 0 -16px repeat-x;
+            width: 80px;
+            height: 16px;
+        }
+        span.stars>*{
+            max-width:80px;
+            background-position: 0 0;
+        }
     </style>
 </head>
 <body>
