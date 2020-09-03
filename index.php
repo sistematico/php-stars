@@ -83,8 +83,14 @@ span.stars>*{
             $('.stars').click(function(e){
                 var posX = $(this).position().left;
                 var range = e.pageX - posX;
-                var rounded = Math.round(range * 10) / 10;
+                //var rounded = Math.round(range * 10) / 10;
                 //alert($(this).offset().left);
+
+
+                var multiplier = Math.pow(10, 1 || 0);
+                var rounded = Math.round(range * multiplier) / multiplier;
+
+
                 alert(rounded);
             });
         });
