@@ -28,7 +28,8 @@
     </style>
 </head>
 <body>
-    Rating: <span class="stars">0.6</span> <button>RESET</button>
+    Rating: <span class="stars">0.6</span><br />
+    <button>RESET</button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
