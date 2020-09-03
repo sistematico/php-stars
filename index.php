@@ -21,7 +21,7 @@
             width: 80px;
             height: 16px;
         }
-        span.stars>*{
+        div.stars>*{
             max-width:80px;
             background-position: 0 0;
         }
