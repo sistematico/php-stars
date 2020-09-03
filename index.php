@@ -33,6 +33,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
+            $.fn.stars = function() {
+                return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
+            };
+
             $('button').click(function(){
                 $.ajax({
                     url: "voto.php",
@@ -41,6 +45,7 @@
                     context: document.body
                 }).done(function(data) {
                     $('.stars').html(data);
+                    $('.stars').stars();
                 });
             });
 
@@ -50,13 +55,8 @@
                     context: document.body
             }).done(function(data) {
                 $('.stars').html(data);
+                $('.stars').stars();
             });
-
-
-            $.fn.stars = function() {
-                return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
-            };
-            $('.stars').stars();
 
             $('.stars').click(function(e){
                 var posicao = $(this).position().left;
@@ -74,6 +74,8 @@
                     $('.stars').stars();
                 });
             });
+
+            $('.stars').stars();
 
         });
     </script>
