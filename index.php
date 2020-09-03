@@ -33,9 +33,7 @@
             <h1 class="title">Sistema de Classificação</h1>
             <p class="subtitle">Clique em uma estrela e avalie.</p>
 
-            <h2>Classificação</h2>
-            <br />
-            <span class="stars" style="margin:0; padding: 0;">0.6</span>
+            Classificação: <span class="stars" style="margin:0; padding: 0;">0.6</span>
 
             <h2>Média</h2>
             <p class="media">0</p>
