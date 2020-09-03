@@ -97,13 +97,14 @@
 
             $('.stars').stars();
 
-            $.ajax({
-                url: 'votos.json',
-                dataType: 'json'
-            }).done(function(data) {
-                $('.json').html(JSON.stringify(data, undefined, 2));
-            });
-            
+            setInterval(function() {
+                $.ajax({
+                    url: 'votos.json',
+                    dataType: 'json'
+                }).done(function(data) {
+                    $('.json').html(JSON.stringify(data, undefined, 2));
+                });
+            },1000);
 
         });
     </script>
