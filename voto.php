@@ -27,6 +27,8 @@ foreach ($votos as $stars => $votes) {
     $totalStars += $stars * $votes;
 }
 
-echo ($totalStars > 0 ? $totalStars/$voters : 0);
+$media = ($totalStars > 0 ? $totalStars/$voters : 0);
+
+echo json_encode(['media'=>$media,'total'=>$voters], true);
 
 ?>
