@@ -32,6 +32,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(e) {
+            function reset() {
+                $.ajax({
+                    url: "voto.php",
+                    method: "POST",
+                    data: { reset: 'true' },
+                    context: document.body
+                }).done(function(data) {
+                    $('.stars').html(data);
+                });
+            }
+
             $.ajax({
                     url: "voto.php",
                     method: "GET",
