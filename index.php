@@ -7,12 +7,7 @@
     <meta name="description" content="Descrição">
     <meta name="author" content="Autor do site">
     <title>PHP Stars Rating</title>
-    <meta property="og:title" content="titulo" />
-    <meta property="og:description" content="descrição" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://site.com" />
-    <meta property="og:image" content="https://site.com/img/logo.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> -->
     <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
     <style>
         span.stars, span.stars>* {
@@ -33,7 +28,8 @@
             <h1 class="title">Sistema de Classificação</h1>
             <p class="subtitle">Clique em uma estrela e avalie.</p>
 
-            <h2>Classificação <span class="stars" style="margin:0; padding: 0;">0.6</span><h2>
+            <h2>Classificação<h2>
+            <span class="stars" style="margin:0; padding: 0;">0.6</span>
 
             <h2>Média: <span class="media">0</span></h2>
             
